@@ -2,8 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <link rel="shortcut icon" type="image/x-icon" href="//www.nejigram.com/assets/img/itemicon.ico" />
 <title>bmi</title>
 <link rel='stylesheet' href='css/style.css?<?=time();?>' type='text/css' />
