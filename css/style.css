@@ -242,5 +242,7 @@ background-color:#8fd1da;
     .result{
         width: 90%;
     }
-
+    input{
+        font-size:16px;
+    }
 }
