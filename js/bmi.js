@@ -11,7 +11,7 @@ const bmi_calc = function(h = 0,w = 0){
     hm = h / 100;
     const bminum = (Math.ceil((w / (hm * hm)) * 100)) / 100
     bmi.innerHTML = bminum;
-console.log(result1);
+
     for(let x = 0;x < result1.length;x++){
         result1[x].classList.remove("bbox_bk_5");
 

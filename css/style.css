@@ -236,7 +236,7 @@ background-color:#8fd1da;
 
 
 @media screen and (max-width: 900px) {
-    h1,.box{
+    header,.box{
         width: 100%;
     }
     .result{
