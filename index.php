@@ -14,12 +14,37 @@
 <h1>bmi 計算機</h1>
 </header>
 <div class="box font_sawarabi_gothic">
-<form>
-<p class="tc heightline">身長 : <input type="number" id="height"> cm</p>
-<p class="tc">体重 : <input type="number" id="weight"> kg</p>
-</form>
-<p class="tc bmiline">bmi : <span id="bmi" class="">----</span></p>
-
+    <form>
+    <p class="tc">身長 : <input type="number" id="height">cm</p>
+    <p class="tc">体重 : <input type="number" id="weight"> kg</p>
+    </form>
+    <ul class="flex">
+        <li class="tc bmiline w100">
+            現在のbmi : <span id="bmi">----</span>
+        </li>
+    </ul>
+    <ul class="flex">
+        <li class="tc bmiline w33">
+            適正bmi : <span id="bmi_right">22</span>
+        </li>
+        <li class="tc bmiline w33">
+            美容bmi : <span id="bmi_beauty">20</span>
+        </li>
+        <li class="tc bmiline w33">
+            モデルbmi : <span id="bmi_model">18</span>
+        </li>
+    </ul>
+    <ul class="flex">
+        <li class="tc bmiline w33">
+            適正体重 : <span id="weight_right">----</span>
+        </li>
+        <li class="tc bmiline w33">
+            美容体重 : <span id="weight_beauty">----</span>
+        </li>
+        <li class="tc bmiline w33">
+            モデル体重 : <span id="weight_model">----</span>
+        </li>
+    </ul>
     <div class="result ja" id="result1">
         <p>18.5未満　低体重</p>
         <p>18.5～25未満	普通体重</p>

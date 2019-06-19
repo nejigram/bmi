@@ -233,8 +233,15 @@ background-color:#8fd1da;
 .result.ja p:nth-child(5),.result.ja p:nth-child(6),.result.who p:nth-child(7),.result.who p:nth-child(8){
     background-color:#dc435f;
 }
-
-
+.flex{
+    display: flex;
+}
+.w100{
+    width: 100%;
+}
+.w33{
+    width: 33%;
+}
 @media screen and (max-width: 900px) {
     header,.box{
         width: 100%;

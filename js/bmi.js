@@ -1,14 +1,31 @@
-const height = document.querySelector("#height");
-const weight = document.querySelector("#weight");
-const bmi = document.querySelector("#bmi");
-const result1 = document.querySelectorAll("#result1 p");
-const result2 = document.querySelectorAll("#result2 p");
+const
+height = document.querySelector("#height"),
+weight = document.querySelector("#weight"),
+bmi = document.querySelector("#bmi"),
+bmi_right = document.querySelector("#bmi_right"),
+bmi_beauty = document.querySelector("#bmi_beauty"),
+bmi_model = document.querySelector("#bmi_model"),
+weight_right = document.querySelector("#weight_right"),
+weight_beauty = document.querySelector("#weight_beauty"),
+weight_model = document.querySelector("#weight_model"),
+result1 = document.querySelectorAll("#result1 p"),
+result2 = document.querySelectorAll("#result2 p");
+
+
+height.addEventListener("input",function(){
+    weight_calc(height.value);
+    bmi_calc(height.value,weight.value);
+});
+
+weight.addEventListener("input",function(){
+    bmi_calc(height.value,weight.value);
+});
 const bmi_calc = function(h = 0,w = 0){
     if(h <= 0 || w <= 0){
         return false;
     }
 
-    hm = h / 100;
+    const hm = h / 100;
     const bminum = (Math.ceil((w / (hm * hm)) * 100)) / 100
     bmi.innerHTML = bminum;
 
@@ -46,11 +63,12 @@ const bmi_calc = function(h = 0,w = 0){
     }
 
 }
-
-height.addEventListener("input",function(){
-    bmi_calc(height.value,weight.value);
-});
-
-weight.addEventListener("input",function(){
-    bmi_calc(height.value,weight.value);
-})
+const weight_calc = function(h){
+    const b_r = parseInt(bmi_right.innerHTML);
+    const b_b = parseInt(bmi_beauty.innerHTML);
+    const b_m = parseInt(bmi_model.innerHTML);
+    const hm = h / 100;
+    weight_right.innerHTML = (Math.ceil(((hm * hm) * b_r)* 100)) / 100;
+    weight_beauty.innerHTML = (Math.ceil(((hm * hm) * b_b)* 100)) / 100;
+    weight_model.innerHTML = (Math.ceil(((hm * hm) * b_m)* 100)) / 100;
+}
