@@ -36,6 +36,17 @@
     </ul>
     <ul class="flex">
         <li class="tc bmiline w33">
+            +- : <span id="b_pm_right">----</span>
+        </li>
+        <li class="tc bmiline w33">
+            +- : <span id="b_pm_beauty">----</span>
+        </li>
+        <li class="tc bmiline w33">
+            +- : <span id="b_pm_model">----</span>
+        </li>
+    </ul>
+    <ul class="flex">
+        <li class="tc bmiline w33">
             適正体重 : <span id="weight_right">----</span>
         </li>
         <li class="tc bmiline w33">
@@ -43,6 +54,17 @@
         </li>
         <li class="tc bmiline w33">
             モデル体重 : <span id="weight_model">----</span>
+        </li>
+    </ul>
+    <ul class="flex">
+        <li class="tc bmiline w33">
+            +- : <span id="w_pm_right">----</span>
+        </li>
+        <li class="tc bmiline w33">
+            +- : <span id="w_pm_beauty">----</span>
+        </li>
+        <li class="tc bmiline w33">
+            +- : <span id="w_pm_model">----</span>
         </li>
     </ul>
     <div class="result ja" id="result1">

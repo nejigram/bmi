@@ -8,6 +8,12 @@ bmi_model = document.querySelector("#bmi_model"),
 weight_right = document.querySelector("#weight_right"),
 weight_beauty = document.querySelector("#weight_beauty"),
 weight_model = document.querySelector("#weight_model"),
+b_pm_right = document.querySelector("#b_pm_right"),
+b_pm_beauty = document.querySelector("#b_pm_beauty"),
+b_pm_model = document.querySelector("#b_pm_model"),
+w_pm_right = document.querySelector("#w_pm_right"),
+w_pm_beauty = document.querySelector("#w_pm_beauty"),
+w_pm_model = document.querySelector("#w_pm_model"),
 result1 = document.querySelectorAll("#result1 p"),
 result2 = document.querySelectorAll("#result2 p");
 
@@ -28,6 +34,34 @@ const bmi_calc = function(h = 0,w = 0){
     const hm = h / 100;
     const bminum = (Math.ceil((w / (hm * hm)) * 100)) / 100
     bmi.innerHTML = bminum;
+
+
+    b_pm_right.innerHTML = (Math.ceil((bminum - parseFloat(bmi_right.innerHTML)) * 100) /100);
+    if(parseFloat(b_pm_right.innerHTML) > 0){
+        b_pm_right.innerHTML = "+" + b_pm_right.innerHTML;
+    }
+    b_pm_beauty.innerHTML = (Math.ceil((bminum - parseFloat(bmi_beauty.innerHTML)) * 100) /100);
+    if(parseFloat(b_pm_beauty.innerHTML) > 0){
+        b_pm_beauty.innerHTML = "+" + b_pm_beauty.innerHTML;
+    }
+    b_pm_model.innerHTML = (Math.ceil((bminum - parseFloat(bmi_model.innerHTML)) * 100) /100);
+    if(parseFloat(b_pm_model.innerHTML) > 0){
+        b_pm_model.innerHTML = "+" + b_pm_model.innerHTML;
+    }
+    w_pm_right.innerHTML = (Math.ceil((w - parseFloat(weight_right.innerHTML)) * 100) /100);
+    if(parseFloat(w_pm_right.innerHTML) > 0){
+        w_pm_right.innerHTML = "+" + w_pm_right.innerHTML;
+    }
+    w_pm_beauty.innerHTML = (Math.ceil((w - parseFloat(weight_beauty.innerHTML)) * 100) /100);
+    if(parseFloat(w_pm_beauty.innerHTML) > 0){
+        w_pm_beauty.innerHTML = "+" + w_pm_beauty.innerHTML;
+    }
+    w_pm_model.innerHTML = (Math.ceil((w - parseFloat(weight_model.innerHTML)) * 100) /100);
+    if(parseFloat(w_pm_model.innerHTML) > 0){
+        w_pm_model.innerHTML = "+" + w_pm_model.innerHTML;
+    }
+
+
 
     for(let x = 0;x < result1.length;x++){
         result1[x].classList.remove("bbox_bk_5");
